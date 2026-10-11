@@ -1,4 +1,4 @@
-# Group 2 Process Scheduling Simulator
+# Operating Systems PBL :- Group 2 Process Scheduling Simulator
 
 Open **index.html** in Microsoft Edge or another modern desktop browser. The program works offline. No installation, server, internet connection or external library is required to use it.
 
