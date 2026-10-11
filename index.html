@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Group 2 Process Scheduling Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap"><p class="eyebrow">OPERATING SYSTEM CIC-305T · GROUP 2</p>
+<h1>Process Scheduling Simulator</h1>
+<p>Compare FCFS, Shortest Job Next and Round Robin on the same workload.</p></div></header>
+<main class="wrap">
+  <section aria-labelledby="input-title">
+    <div class="section-title"><h2 id="input-title">1. Enter processes</h2><span>All times use abstract time units</span></div>
+    <div class="controls"><label for="example">Example workload</label>
+      <select id="example"><option value="main">Staggered arrivals</option><option value="batch">All arrive together</option><option value="idle">CPU idle gaps</option></select>
+      <button id="load" type="button">Load example</button><button id="add" type="button">Add process</button>
+      <label for="quantum">RR quantum</label><input id="quantum" type="number" min="1" max="1000" value="2">
+    </div>
+    <div class="table-scroll"><table class="input-table"><thead><tr><th>Process ID</th><th>Arrival time</th><th>Burst time</th><th>Action</th></tr></thead><tbody id="inputs"></tbody></table></div>
+    <p class="hint">1–20 processes. Arrival 0–100000, burst 1–1000, quantum 1–1000. Whole numbers only.</p>
+    <button id="run" class="primary" type="button">Run all algorithms</button>
+    <p id="error" role="alert"></p>
+  </section>
+  <div id="results" hidden>
+    <section><div class="section-title"><h2>2. Compare performance</h2><button id="csv" type="button">Download CSV</button></div>
+      <div class="table-scroll"><table><thead><tr><th>Algorithm</th><th>Avg waiting</th><th>Avg turnaround</th><th>Avg response</th><th>CPU utilization</th><th>Handoffs</th></tr></thead><tbody id="comparison"></tbody></table></div>
+      <p id="finding" class="finding"></p>
+    </section>
+    <section><div class="section-title"><h2>3. Examine the schedule</h2><label for="algorithm">Algorithm <select id="algorithm"><option>FCFS</option><option>SJN</option><option>RR</option></select></label></div>
+      <p id="description"></p><div id="gantt" aria-label="Gantt chart"></div>
+      <p class="hint">Each block shows its process and exact start–end range. Block width is proportional to duration.</p>
+      <div class="table-scroll"><table><thead><tr><th>Process</th><th>AT</th><th>BT</th><th>First start</th><th>CT</th><th>TAT</th><th>WT</th><th>RT</th></tr></thead><tbody id="metrics"></tbody></table></div>
+      <p id="totals"></p>
+    </section>
+    <section><h2>4. Step through execution slices</h2>
+      <div class="controls"><button id="previous" type="button">Previous slice</button><button id="next" type="button">Next slice</button><button id="reset" type="button">Reset</button><span id="step" aria-live="polite"></span></div>
+      <p id="step-detail"></p>
+    </section>
+  </div>
+  <section class="notes"><h2>How to interpret the results</h2>
+    <p>CT = completion time. TAT = CT − AT. WT = TAT − BT. RT = first start − AT.</p>
+    <p>FCFS and SJN run a selected process to completion. SJN chooses the shortest burst among arrived processes. RR runs each process for at most one quantum, then rejoins it to the ready queue if needed.</p>
+    <p>Ties use arrival time, then input order. In RR, arrivals at a slice boundary enter the queue before the interrupted process rejoins it.</p>
+    <p>Model: one CPU, one known CPU burst per process, no I/O or priorities, and zero context switch cost. Utilization includes idle time from time 0. Handoffs count only a change between two different processes without an idle gap.</p>
+  </section>
+</main>
+<footer class="wrap">Bharati Vidyapeeth’s College of Engineering, New Delhi · CSE · Academic year 2026–27</footer>
+<script src="scheduler.js"></script><script src="app.js"></script>
+</body></html>

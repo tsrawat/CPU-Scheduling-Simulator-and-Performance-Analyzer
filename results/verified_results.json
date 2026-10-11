@@ -1,0 +1,1182 @@
+{
+  "generatedAt": "2026-10-11",
+  "testGroupsPassed": 14,
+  "randomWorkloads": 300,
+  "randomAlgorithmRuns": 900,
+  "main": {
+    "input": [
+      {
+        "id": "P1",
+        "arrival": 0,
+        "burst": 8
+      },
+      {
+        "id": "P2",
+        "arrival": 1,
+        "burst": 4
+      },
+      {
+        "id": "P3",
+        "arrival": 2,
+        "burst": 2
+      },
+      {
+        "id": "P4",
+        "arrival": 3,
+        "burst": 1
+      }
+    ],
+    "quantum": 2,
+    "results": [
+      {
+        "algorithm": "FCFS",
+        "quantum": null,
+        "segments": [
+          {
+            "id": "P1",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "id": "P2",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "id": "P3",
+            "start": 12,
+            "end": 14
+          },
+          {
+            "id": "P4",
+            "start": 14,
+            "end": 15
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 0,
+            "burst": 8,
+            "firstStart": 0,
+            "completion": 8,
+            "turnaround": 8,
+            "waiting": 0,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 1,
+            "burst": 4,
+            "firstStart": 8,
+            "completion": 12,
+            "turnaround": 11,
+            "waiting": 7,
+            "response": 7
+          },
+          {
+            "id": "P3",
+            "arrival": 2,
+            "burst": 2,
+            "firstStart": 12,
+            "completion": 14,
+            "turnaround": 12,
+            "waiting": 10,
+            "response": 10
+          },
+          {
+            "id": "P4",
+            "arrival": 3,
+            "burst": 1,
+            "firstStart": 14,
+            "completion": 15,
+            "turnaround": 12,
+            "waiting": 11,
+            "response": 11
+          }
+        ],
+        "averages": {
+          "waiting": 7,
+          "turnaround": 10.75,
+          "response": 7
+        },
+        "busy": 15,
+        "elapsed": 15,
+        "idle": 0,
+        "utilization": 100,
+        "throughput": 0.26666666666666666,
+        "handoffs": 3,
+        "slices": 4
+      },
+      {
+        "algorithm": "SJN",
+        "quantum": null,
+        "segments": [
+          {
+            "id": "P1",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "id": "P4",
+            "start": 8,
+            "end": 9
+          },
+          {
+            "id": "P3",
+            "start": 9,
+            "end": 11
+          },
+          {
+            "id": "P2",
+            "start": 11,
+            "end": 15
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 0,
+            "burst": 8,
+            "firstStart": 0,
+            "completion": 8,
+            "turnaround": 8,
+            "waiting": 0,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 1,
+            "burst": 4,
+            "firstStart": 11,
+            "completion": 15,
+            "turnaround": 14,
+            "waiting": 10,
+            "response": 10
+          },
+          {
+            "id": "P3",
+            "arrival": 2,
+            "burst": 2,
+            "firstStart": 9,
+            "completion": 11,
+            "turnaround": 9,
+            "waiting": 7,
+            "response": 7
+          },
+          {
+            "id": "P4",
+            "arrival": 3,
+            "burst": 1,
+            "firstStart": 8,
+            "completion": 9,
+            "turnaround": 6,
+            "waiting": 5,
+            "response": 5
+          }
+        ],
+        "averages": {
+          "waiting": 5.5,
+          "turnaround": 9.25,
+          "response": 5.5
+        },
+        "busy": 15,
+        "elapsed": 15,
+        "idle": 0,
+        "utilization": 100,
+        "throughput": 0.26666666666666666,
+        "handoffs": 3,
+        "slices": 4
+      },
+      {
+        "algorithm": "RR",
+        "quantum": 2,
+        "segments": [
+          {
+            "id": "P1",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "P2",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "id": "P3",
+            "start": 4,
+            "end": 6
+          },
+          {
+            "id": "P1",
+            "start": 6,
+            "end": 8
+          },
+          {
+            "id": "P4",
+            "start": 8,
+            "end": 9
+          },
+          {
+            "id": "P2",
+            "start": 9,
+            "end": 11
+          },
+          {
+            "id": "P1",
+            "start": 11,
+            "end": 13
+          },
+          {
+            "id": "P1",
+            "start": 13,
+            "end": 15
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 0,
+            "burst": 8,
+            "firstStart": 0,
+            "completion": 15,
+            "turnaround": 15,
+            "waiting": 7,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 1,
+            "burst": 4,
+            "firstStart": 2,
+            "completion": 11,
+            "turnaround": 10,
+            "waiting": 6,
+            "response": 1
+          },
+          {
+            "id": "P3",
+            "arrival": 2,
+            "burst": 2,
+            "firstStart": 4,
+            "completion": 6,
+            "turnaround": 4,
+            "waiting": 2,
+            "response": 2
+          },
+          {
+            "id": "P4",
+            "arrival": 3,
+            "burst": 1,
+            "firstStart": 8,
+            "completion": 9,
+            "turnaround": 6,
+            "waiting": 5,
+            "response": 5
+          }
+        ],
+        "averages": {
+          "waiting": 5,
+          "turnaround": 8.75,
+          "response": 2
+        },
+        "busy": 15,
+        "elapsed": 15,
+        "idle": 0,
+        "utilization": 100,
+        "throughput": 0.26666666666666666,
+        "handoffs": 6,
+        "slices": 8
+      }
+    ]
+  },
+  "batch": {
+    "input": [
+      {
+        "id": "P1",
+        "arrival": 0,
+        "burst": 8
+      },
+      {
+        "id": "P2",
+        "arrival": 0,
+        "burst": 4
+      },
+      {
+        "id": "P3",
+        "arrival": 0,
+        "burst": 2
+      },
+      {
+        "id": "P4",
+        "arrival": 0,
+        "burst": 1
+      }
+    ],
+    "results": [
+      {
+        "algorithm": "FCFS",
+        "quantum": null,
+        "segments": [
+          {
+            "id": "P1",
+            "start": 0,
+            "end": 8
+          },
+          {
+            "id": "P2",
+            "start": 8,
+            "end": 12
+          },
+          {
+            "id": "P3",
+            "start": 12,
+            "end": 14
+          },
+          {
+            "id": "P4",
+            "start": 14,
+            "end": 15
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 0,
+            "burst": 8,
+            "firstStart": 0,
+            "completion": 8,
+            "turnaround": 8,
+            "waiting": 0,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 0,
+            "burst": 4,
+            "firstStart": 8,
+            "completion": 12,
+            "turnaround": 12,
+            "waiting": 8,
+            "response": 8
+          },
+          {
+            "id": "P3",
+            "arrival": 0,
+            "burst": 2,
+            "firstStart": 12,
+            "completion": 14,
+            "turnaround": 14,
+            "waiting": 12,
+            "response": 12
+          },
+          {
+            "id": "P4",
+            "arrival": 0,
+            "burst": 1,
+            "firstStart": 14,
+            "completion": 15,
+            "turnaround": 15,
+            "waiting": 14,
+            "response": 14
+          }
+        ],
+        "averages": {
+          "waiting": 8.5,
+          "turnaround": 12.25,
+          "response": 8.5
+        },
+        "busy": 15,
+        "elapsed": 15,
+        "idle": 0,
+        "utilization": 100,
+        "throughput": 0.26666666666666666,
+        "handoffs": 3,
+        "slices": 4
+      },
+      {
+        "algorithm": "SJN",
+        "quantum": null,
+        "segments": [
+          {
+            "id": "P4",
+            "start": 0,
+            "end": 1
+          },
+          {
+            "id": "P3",
+            "start": 1,
+            "end": 3
+          },
+          {
+            "id": "P2",
+            "start": 3,
+            "end": 7
+          },
+          {
+            "id": "P1",
+            "start": 7,
+            "end": 15
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 0,
+            "burst": 8,
+            "firstStart": 7,
+            "completion": 15,
+            "turnaround": 15,
+            "waiting": 7,
+            "response": 7
+          },
+          {
+            "id": "P2",
+            "arrival": 0,
+            "burst": 4,
+            "firstStart": 3,
+            "completion": 7,
+            "turnaround": 7,
+            "waiting": 3,
+            "response": 3
+          },
+          {
+            "id": "P3",
+            "arrival": 0,
+            "burst": 2,
+            "firstStart": 1,
+            "completion": 3,
+            "turnaround": 3,
+            "waiting": 1,
+            "response": 1
+          },
+          {
+            "id": "P4",
+            "arrival": 0,
+            "burst": 1,
+            "firstStart": 0,
+            "completion": 1,
+            "turnaround": 1,
+            "waiting": 0,
+            "response": 0
+          }
+        ],
+        "averages": {
+          "waiting": 2.75,
+          "turnaround": 6.5,
+          "response": 2.75
+        },
+        "busy": 15,
+        "elapsed": 15,
+        "idle": 0,
+        "utilization": 100,
+        "throughput": 0.26666666666666666,
+        "handoffs": 3,
+        "slices": 4
+      },
+      {
+        "algorithm": "RR",
+        "quantum": 2,
+        "segments": [
+          {
+            "id": "P1",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "P2",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "id": "P3",
+            "start": 4,
+            "end": 6
+          },
+          {
+            "id": "P4",
+            "start": 6,
+            "end": 7
+          },
+          {
+            "id": "P1",
+            "start": 7,
+            "end": 9
+          },
+          {
+            "id": "P2",
+            "start": 9,
+            "end": 11
+          },
+          {
+            "id": "P1",
+            "start": 11,
+            "end": 13
+          },
+          {
+            "id": "P1",
+            "start": 13,
+            "end": 15
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 0,
+            "burst": 8,
+            "firstStart": 0,
+            "completion": 15,
+            "turnaround": 15,
+            "waiting": 7,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 0,
+            "burst": 4,
+            "firstStart": 2,
+            "completion": 11,
+            "turnaround": 11,
+            "waiting": 7,
+            "response": 2
+          },
+          {
+            "id": "P3",
+            "arrival": 0,
+            "burst": 2,
+            "firstStart": 4,
+            "completion": 6,
+            "turnaround": 6,
+            "waiting": 4,
+            "response": 4
+          },
+          {
+            "id": "P4",
+            "arrival": 0,
+            "burst": 1,
+            "firstStart": 6,
+            "completion": 7,
+            "turnaround": 7,
+            "waiting": 6,
+            "response": 6
+          }
+        ],
+        "averages": {
+          "waiting": 6,
+          "turnaround": 9.75,
+          "response": 3
+        },
+        "busy": 15,
+        "elapsed": 15,
+        "idle": 0,
+        "utilization": 100,
+        "throughput": 0.26666666666666666,
+        "handoffs": 6,
+        "slices": 8
+      }
+    ]
+  },
+  "idle": {
+    "input": [
+      {
+        "id": "P1",
+        "arrival": 2,
+        "burst": 3
+      },
+      {
+        "id": "P2",
+        "arrival": 8,
+        "burst": 2
+      }
+    ],
+    "results": [
+      {
+        "algorithm": "FCFS",
+        "quantum": null,
+        "segments": [
+          {
+            "id": "IDLE",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "P1",
+            "start": 2,
+            "end": 5
+          },
+          {
+            "id": "IDLE",
+            "start": 5,
+            "end": 8
+          },
+          {
+            "id": "P2",
+            "start": 8,
+            "end": 10
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 2,
+            "burst": 3,
+            "firstStart": 2,
+            "completion": 5,
+            "turnaround": 3,
+            "waiting": 0,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 8,
+            "burst": 2,
+            "firstStart": 8,
+            "completion": 10,
+            "turnaround": 2,
+            "waiting": 0,
+            "response": 0
+          }
+        ],
+        "averages": {
+          "waiting": 0,
+          "turnaround": 2.5,
+          "response": 0
+        },
+        "busy": 5,
+        "elapsed": 10,
+        "idle": 5,
+        "utilization": 50,
+        "throughput": 0.2,
+        "handoffs": 0,
+        "slices": 2
+      },
+      {
+        "algorithm": "SJN",
+        "quantum": null,
+        "segments": [
+          {
+            "id": "IDLE",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "P1",
+            "start": 2,
+            "end": 5
+          },
+          {
+            "id": "IDLE",
+            "start": 5,
+            "end": 8
+          },
+          {
+            "id": "P2",
+            "start": 8,
+            "end": 10
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 2,
+            "burst": 3,
+            "firstStart": 2,
+            "completion": 5,
+            "turnaround": 3,
+            "waiting": 0,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 8,
+            "burst": 2,
+            "firstStart": 8,
+            "completion": 10,
+            "turnaround": 2,
+            "waiting": 0,
+            "response": 0
+          }
+        ],
+        "averages": {
+          "waiting": 0,
+          "turnaround": 2.5,
+          "response": 0
+        },
+        "busy": 5,
+        "elapsed": 10,
+        "idle": 5,
+        "utilization": 50,
+        "throughput": 0.2,
+        "handoffs": 0,
+        "slices": 2
+      },
+      {
+        "algorithm": "RR",
+        "quantum": 2,
+        "segments": [
+          {
+            "id": "IDLE",
+            "start": 0,
+            "end": 2
+          },
+          {
+            "id": "P1",
+            "start": 2,
+            "end": 4
+          },
+          {
+            "id": "P1",
+            "start": 4,
+            "end": 5
+          },
+          {
+            "id": "IDLE",
+            "start": 5,
+            "end": 8
+          },
+          {
+            "id": "P2",
+            "start": 8,
+            "end": 10
+          }
+        ],
+        "metrics": [
+          {
+            "id": "P1",
+            "arrival": 2,
+            "burst": 3,
+            "firstStart": 2,
+            "completion": 5,
+            "turnaround": 3,
+            "waiting": 0,
+            "response": 0
+          },
+          {
+            "id": "P2",
+            "arrival": 8,
+            "burst": 2,
+            "firstStart": 8,
+            "completion": 10,
+            "turnaround": 2,
+            "waiting": 0,
+            "response": 0
+          }
+        ],
+        "averages": {
+          "waiting": 0,
+          "turnaround": 2.5,
+          "response": 0
+        },
+        "busy": 5,
+        "elapsed": 10,
+        "idle": 5,
+        "utilization": 50,
+        "throughput": 0.2,
+        "handoffs": 0,
+        "slices": 3
+      }
+    ]
+  },
+  "quantumStudy": [
+    {
+      "algorithm": "RR",
+      "quantum": 1,
+      "segments": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 1
+        },
+        {
+          "id": "P2",
+          "start": 1,
+          "end": 2
+        },
+        {
+          "id": "P1",
+          "start": 2,
+          "end": 3
+        },
+        {
+          "id": "P3",
+          "start": 3,
+          "end": 4
+        },
+        {
+          "id": "P2",
+          "start": 4,
+          "end": 5
+        },
+        {
+          "id": "P4",
+          "start": 5,
+          "end": 6
+        },
+        {
+          "id": "P1",
+          "start": 6,
+          "end": 7
+        },
+        {
+          "id": "P3",
+          "start": 7,
+          "end": 8
+        },
+        {
+          "id": "P2",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "P1",
+          "start": 9,
+          "end": 10
+        },
+        {
+          "id": "P2",
+          "start": 10,
+          "end": 11
+        },
+        {
+          "id": "P1",
+          "start": 11,
+          "end": 12
+        },
+        {
+          "id": "P1",
+          "start": 12,
+          "end": 13
+        },
+        {
+          "id": "P1",
+          "start": 13,
+          "end": 14
+        },
+        {
+          "id": "P1",
+          "start": 14,
+          "end": 15
+        }
+      ],
+      "metrics": [
+        {
+          "id": "P1",
+          "arrival": 0,
+          "burst": 8,
+          "firstStart": 0,
+          "completion": 15,
+          "turnaround": 15,
+          "waiting": 7,
+          "response": 0
+        },
+        {
+          "id": "P2",
+          "arrival": 1,
+          "burst": 4,
+          "firstStart": 1,
+          "completion": 11,
+          "turnaround": 10,
+          "waiting": 6,
+          "response": 0
+        },
+        {
+          "id": "P3",
+          "arrival": 2,
+          "burst": 2,
+          "firstStart": 3,
+          "completion": 8,
+          "turnaround": 6,
+          "waiting": 4,
+          "response": 1
+        },
+        {
+          "id": "P4",
+          "arrival": 3,
+          "burst": 1,
+          "firstStart": 5,
+          "completion": 6,
+          "turnaround": 3,
+          "waiting": 2,
+          "response": 2
+        }
+      ],
+      "averages": {
+        "waiting": 4.75,
+        "turnaround": 8.5,
+        "response": 0.75
+      },
+      "busy": 15,
+      "elapsed": 15,
+      "idle": 0,
+      "utilization": 100,
+      "throughput": 0.26666666666666666,
+      "handoffs": 11,
+      "slices": 15
+    },
+    {
+      "algorithm": "RR",
+      "quantum": 2,
+      "segments": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "id": "P2",
+          "start": 2,
+          "end": 4
+        },
+        {
+          "id": "P3",
+          "start": 4,
+          "end": 6
+        },
+        {
+          "id": "P1",
+          "start": 6,
+          "end": 8
+        },
+        {
+          "id": "P4",
+          "start": 8,
+          "end": 9
+        },
+        {
+          "id": "P2",
+          "start": 9,
+          "end": 11
+        },
+        {
+          "id": "P1",
+          "start": 11,
+          "end": 13
+        },
+        {
+          "id": "P1",
+          "start": 13,
+          "end": 15
+        }
+      ],
+      "metrics": [
+        {
+          "id": "P1",
+          "arrival": 0,
+          "burst": 8,
+          "firstStart": 0,
+          "completion": 15,
+          "turnaround": 15,
+          "waiting": 7,
+          "response": 0
+        },
+        {
+          "id": "P2",
+          "arrival": 1,
+          "burst": 4,
+          "firstStart": 2,
+          "completion": 11,
+          "turnaround": 10,
+          "waiting": 6,
+          "response": 1
+        },
+        {
+          "id": "P3",
+          "arrival": 2,
+          "burst": 2,
+          "firstStart": 4,
+          "completion": 6,
+          "turnaround": 4,
+          "waiting": 2,
+          "response": 2
+        },
+        {
+          "id": "P4",
+          "arrival": 3,
+          "burst": 1,
+          "firstStart": 8,
+          "completion": 9,
+          "turnaround": 6,
+          "waiting": 5,
+          "response": 5
+        }
+      ],
+      "averages": {
+        "waiting": 5,
+        "turnaround": 8.75,
+        "response": 2
+      },
+      "busy": 15,
+      "elapsed": 15,
+      "idle": 0,
+      "utilization": 100,
+      "throughput": 0.26666666666666666,
+      "handoffs": 6,
+      "slices": 8
+    },
+    {
+      "algorithm": "RR",
+      "quantum": 4,
+      "segments": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "id": "P2",
+          "start": 4,
+          "end": 8
+        },
+        {
+          "id": "P3",
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "P4",
+          "start": 10,
+          "end": 11
+        },
+        {
+          "id": "P1",
+          "start": 11,
+          "end": 15
+        }
+      ],
+      "metrics": [
+        {
+          "id": "P1",
+          "arrival": 0,
+          "burst": 8,
+          "firstStart": 0,
+          "completion": 15,
+          "turnaround": 15,
+          "waiting": 7,
+          "response": 0
+        },
+        {
+          "id": "P2",
+          "arrival": 1,
+          "burst": 4,
+          "firstStart": 4,
+          "completion": 8,
+          "turnaround": 7,
+          "waiting": 3,
+          "response": 3
+        },
+        {
+          "id": "P3",
+          "arrival": 2,
+          "burst": 2,
+          "firstStart": 8,
+          "completion": 10,
+          "turnaround": 8,
+          "waiting": 6,
+          "response": 6
+        },
+        {
+          "id": "P4",
+          "arrival": 3,
+          "burst": 1,
+          "firstStart": 10,
+          "completion": 11,
+          "turnaround": 8,
+          "waiting": 7,
+          "response": 7
+        }
+      ],
+      "averages": {
+        "waiting": 5.75,
+        "turnaround": 9.5,
+        "response": 4
+      },
+      "busy": 15,
+      "elapsed": 15,
+      "idle": 0,
+      "utilization": 100,
+      "throughput": 0.26666666666666666,
+      "handoffs": 4,
+      "slices": 5
+    },
+    {
+      "algorithm": "RR",
+      "quantum": 8,
+      "segments": [
+        {
+          "id": "P1",
+          "start": 0,
+          "end": 8
+        },
+        {
+          "id": "P2",
+          "start": 8,
+          "end": 12
+        },
+        {
+          "id": "P3",
+          "start": 12,
+          "end": 14
+        },
+        {
+          "id": "P4",
+          "start": 14,
+          "end": 15
+        }
+      ],
+      "metrics": [
+        {
+          "id": "P1",
+          "arrival": 0,
+          "burst": 8,
+          "firstStart": 0,
+          "completion": 8,
+          "turnaround": 8,
+          "waiting": 0,
+          "response": 0
+        },
+        {
+          "id": "P2",
+          "arrival": 1,
+          "burst": 4,
+          "firstStart": 8,
+          "completion": 12,
+          "turnaround": 11,
+          "waiting": 7,
+          "response": 7
+        },
+        {
+          "id": "P3",
+          "arrival": 2,
+          "burst": 2,
+          "firstStart": 12,
+          "completion": 14,
+          "turnaround": 12,
+          "waiting": 10,
+          "response": 10
+        },
+        {
+          "id": "P4",
+          "arrival": 3,
+          "burst": 1,
+          "firstStart": 14,
+          "completion": 15,
+          "turnaround": 12,
+          "waiting": 11,
+          "response": 11
+        }
+      ],
+      "averages": {
+        "waiting": 7,
+        "turnaround": 10.75,
+        "response": 7
+      },
+      "busy": 15,
+      "elapsed": 15,
+      "idle": 0,
+      "utilization": 100,
+      "throughput": 0.26666666666666666,
+      "handoffs": 3,
+      "slices": 4
+    }
+  ]
+}
